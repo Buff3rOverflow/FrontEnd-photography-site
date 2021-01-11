@@ -1,0 +1,252 @@
+html{
+    /* uses padding as well to calc container
+       empty whitespace around content */
+    box-sizing: border-box;
+    /* sets max dimensions of site */
+    max-width: 900px;
+    max-height: 900px;
+    /* center entire page */
+    margin-left: auto;
+    margin-right: auto;
+    /* set background color or page */
+    background-color:  	rgb(37, 36, 36);
+}
+
+/* STYLING BANNER */
+
+/* position the menu */
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+/* styling drop down menu */
+.dropbtn{
+    /* background-color: lightslategray; */
+    opacity: 0.5;
+    color: midnightblue;
+    padding: 5px;
+    border: none;
+    box-shadow: darkgray;
+    cursor: pointer;
+}
+
+/* dropdown content(hidden by default) */
+.dropdown-content{
+    display: none;
+    padding: 5px 30px 5px 0px;
+    background-color: slategrey;
+    position: absolute;
+    z-index: 1;
+    box-shadow: darkgray;
+    opacity: 0.9;
+}
+
+/* show drop menu on hover */
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+/* icons in drop menu */
+.menu-items{
+    display: flex;
+}
+
+/* professional photgraph banner */
+#top-header{
+    display: inline;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 25px;
+    /* color: rgb(132, 133, 134); */
+    color: whitesmoke;
+}
+/* background img of banner */
+#img-bck{
+    background-image:url("photography.jpg");
+    border-style: outset;
+    border-color: teal;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    /* h-offset v-offset blur spread color */
+    /* box-shadow: 0 5px 5px 5px gray; */
+    box-shadow: 0 5px 5px 5px rgb(65, 64, 64);
+}
+
+/* button for banner */
+/* neumorphism generator(neumorphism.io) */
+#btn{
+    border-radius: 50px;
+    /* display prevents from taking up whole line */
+    display: inline-block; 
+    background:none;
+    box-shadow:  20px 20px 40px #95abb8, 
+                 -20px -20px 40px #8a8d8f;
+    font-size: 18px;
+    font-family: cursive;
+    color: rgb(170, 245, 245);
+    justify-content: center;
+}   
+
+
+.showcase{
+    min-height: 400 px;
+    margin-top: 50px;
+    border-style: outset;
+    border-color: teal;  
+    color: rgb(170, 245, 245);
+    background-image: url("moments-in-time.jpg");
+    background-repeat: no-repeat;
+    /* background-size: 700px 220px; */
+    background-size: cover;
+    background-position: center;
+    /* box-shadow: 0 5px 5px 5px gray; */
+    box-shadow: 0 5px 5px 5px rgb(65, 64, 64);
+}
+
+/* 1rst content */
+#moments{
+    display: inline-block;
+    position: relative;
+    bottom: 10px;
+    left: 10px;
+    margin-bottom: 0px;
+    /* background-color: white; */
+    font-family:'Dancing Script' , cursive;
+    color: whitesmoke;
+}
+
+/* text inside moments in time */
+.txt{
+    display: inline-block;
+    word-wrap: break-word;
+    font-size: 12px;
+}
+
+/* Styling Main Content */
+/* specify grid areas */
+.content-header{
+    grid-area: content-header;
+    line-height: 30px;
+    font-size: medium;
+}
+
+#spec{
+    font-family: 'Dancing Script';
+    font-size: 30px;
+    color:whitesmoke;;
+}
+
+/* styling list text */
+.fa-ul{
+    font-family: 'Rajdhani' , sans-serif;
+    margin-top: -20px;
+    color: rgb(170, 245, 245);
+}
+
+.txt-main{
+    font-family: 'Rajdhani' , sans-serif;
+    /* color: aquamarine; */
+    color: rgb(170, 245, 245);
+}
+
+.outdoor{
+    grid-area: outdoor;
+    margin-top: 20px;
+    line-height: 30px;
+}
+
+.artistic{
+    grid-area: artistic;
+    margin-top: 20px;
+    line-height: 30px;
+}
+
+.pose{
+    grid-area: pose;
+    line-height: 30px;
+}
+
+/* styling images in main content */
+.cnt-imgs{
+    max-width: 100%;
+    max-height: 70%;
+    border-style: outset;
+    border-color: teal;  
+    /* box-shadow: 0 5px 5px 5px gray;   */
+    box-shadow: 0 5px 5px 5px rgb(65, 64, 64);
+}
+
+.img1{
+    grid-area: img1;
+    /*horizontal center*/
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.img2{
+    grid-area: img2;
+    /*horizontal center*/
+    margin-top: -10px; 
+    margin-left: 50px;
+    margin-right: 50px; 
+    display: flex;
+    flex-flow: row nowrap; 
+    align-items: center;
+}
+
+.art-img{
+    max-width: 150%;
+}
+
+.img3{
+    grid-area: img3;
+    /*horizontal center*/
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.pose-img{
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Layout of Container */
+.container{
+    border-style: outset;
+    border-color: teal;
+    /* box-shadow: 5px 5px 5px 5px gray; */
+    box-shadow: 0 5px 5px 5px rgb(65, 64, 64);
+    margin-top: 50px;
+    display: grid;
+    grid-template-areas: 
+    "content-header content-header"
+    "outdoor img1"
+    "img2 artistic"
+    "pose img3"; 
+}
+
+/* Gallery */
+/* ADD HEXAGONAL GALLERY */
+.gallery{
+    margin-top: 50px;;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: outset;
+    border-color: teal;
+    box-shadow: 0 5px 5px 5px rgb(65, 64, 64);
+
+}
+
+/* CONTACT FORM */
